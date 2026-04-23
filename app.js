@@ -8,7 +8,12 @@ function render() {
     table.innerHTML += `
       <tr>
         <td>${item.part}</td>
-        <td>${item.qty}</td>
+        <td>${item.serial}</td>
+        <td>${item.desc}</td>
+        <td>${item.status}</td>
+        <td>${item.owner}</td>
+        <td>${item.contract}</td>
+        <td>${item.borrow}</td>
         <td>${item.date}</td>
       </tr>
     `;
@@ -17,10 +22,15 @@ function render() {
 
 function addItem() {
   const part = document.getElementById("part").value;
-  const qty = document.getElementById("qty").value;
+  const serial = document.getElementById("serial").value;
+  const desc = document.getElementById("desc").value;
+  const status = document.getElementById("status").value;
+  const owner = document.getElementById("owner").value;
+  const contract = document.getElementById("contract").value;
+  const borrow = document.getElementById("borrow").value;
   const date = document.getElementById("date").value;
 
-  data.push({ part, qty, date });
+  data.push({ part, serial, desc, status, owner, contract, borrow, date });
   localStorage.setItem("stockout", JSON.stringify(data));
 
   render();
