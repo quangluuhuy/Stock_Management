@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Stockout Manager</title>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-</head>
-<body>
-
 <h2>Stockout Manager</h2>
 
 <input id="part" placeholder="Part Number">
-<input id="qty" type="number" placeholder="Quantity">
+<input id="serial" placeholder="Serial Number">
+<input id="desc" placeholder="Description">
+<input id="status" placeholder="Status">
+<input id="owner" placeholder="Part Owner">
+<input id="contract" placeholder="Contract">
+<input id="borrow" placeholder="Contract mượn">
 <input id="date" type="date">
+
 <button onclick="addItem()">Add</button>
 
 <br><br>
@@ -21,14 +19,15 @@
 <table border="1">
   <thead>
     <tr>
-      <th>Part</th>
-      <th>Qty</th>
+      <th>Part Number</th>
+      <th>Serial Number</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Part Owner</th>
+      <th>Contract</th>
+      <th>Contract mượn</th>
       <th>Date</th>
     </tr>
   </thead>
   <tbody id="table"></tbody>
 </table>
-
-<script src="app.js"></script>
-</body>
-</html>
